@@ -74,7 +74,7 @@ class IntArray implements Iterable<Integer>{
         for (int i = 0; i < this.length / 2; i++) {
             int temp = this.arr[i];
             this.arr[i] = this.arr[this.length - 1 - i];
-            this.arr[this.length - 1 - 1] = temp;
+            this.arr[this.length - 1 - i] = temp;
         }
     }
 
@@ -127,6 +127,13 @@ public class IntArrayTest {
         }
 
         System.out.println(array.size());
+
+
+        array.reverse();
+        for (int arr : array) {
+            System.out.println(arr);
+        }
+
     }
 }
 
