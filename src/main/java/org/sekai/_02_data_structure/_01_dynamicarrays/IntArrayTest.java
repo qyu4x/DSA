@@ -1,6 +1,8 @@
 package org.sekai._02_data_structure._01_dynamicarrays;
 
 
+import org.sekai._03_algoritm._01_search.BinarySearch;
+
 import java.util.Iterator;
 
 class IntArray implements Iterable<Integer>{
@@ -78,6 +80,10 @@ class IntArray implements Iterable<Integer>{
         }
     }
 
+    public int binarySearch(int target) {
+        return BinarySearch.binarySearch(this.arr, target);
+    }
+
     public String toString() {
         if (this.length == 0) return "[]";
 
@@ -133,6 +139,11 @@ public class IntArrayTest {
         for (int arr : array) {
             System.out.println(arr);
         }
+
+
+        int searchingIndex = array.binarySearch(56);
+        System.out.println("found index: " + searchingIndex);
+        System.out.println("Value of index: " + array.get(searchingIndex));
 
     }
 }
