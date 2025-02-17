@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 class RemoveDuplicateSortedArraySolution {
 
+    // slow and fast two pointer
     public int removeDuplicates(int[] nums) {
         int count = 1;
 
