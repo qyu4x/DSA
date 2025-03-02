@@ -192,6 +192,22 @@ public class DoubleLinkedList<T> implements Iterable<T> {
         return data;
     }
 
+    public int indexOf(T element) {
+        if (isEmpty()) {
+            return -1;
+        }
+
+        Node<T> trav = head;
+        for (int i = 0; i < size; i++) {
+            if (trav.data == element) {
+                return i;
+            }
+
+            trav = trav.next;
+        }
+
+        return -1;
+    }
 
     @Override
     public Iterator<T> iterator() {

@@ -30,7 +30,8 @@ public class DoubleLinkedLIstTest {
             System.out.println(waifu);
         }
 
-        System.out.println(doubleLinkedList.size());
+        System.out.println(doubleLinkedList.indexOf("Hayasaka Ai Miaw"));
+        //System.out.println(doubleLinkedList.size());
 
     }
 }
