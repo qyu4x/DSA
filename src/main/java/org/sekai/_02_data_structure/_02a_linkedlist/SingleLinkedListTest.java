@@ -1,4 +1,4 @@
-package org.sekai._02_data_structure._02a_singlelinkedlist;
+package org.sekai._02_data_structure._02a_linkedlist;
 
 public class SingleLinkedListTest {
     public static void main(String[] args) {
