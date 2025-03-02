@@ -1,8 +1,9 @@
 package org.sekai._02_data_structure._02a_linkedlist;
 
 import java.util.Iterator;
+import java.util.Objects;
 
-public class DoubleLinkedList <T> implements Iterable<T>{
+public class DoubleLinkedList<T> implements Iterable<T> {
 
     private int size;
 
@@ -129,6 +130,23 @@ public class DoubleLinkedList <T> implements Iterable<T>{
         trav.next.next.prev = trav.next;
         size++;
     }
+
+    public T deleteFirst() {
+        if (isEmpty()) {
+            throw new RuntimeException("Empty linkedlist");
+        }
+
+        T data = head.data;
+
+        head = head.next;
+        size--;
+
+        if (isEmpty()) tail = null;
+        else head.prev = null;
+
+        return data;
+    }
+
 
     @Override
     public Iterator<T> iterator() {

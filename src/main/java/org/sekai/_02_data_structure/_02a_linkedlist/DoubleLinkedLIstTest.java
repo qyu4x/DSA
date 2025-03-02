@@ -6,17 +6,21 @@ public class DoubleLinkedLIstTest {
         DoubleLinkedList<String> doubleLinkedList = new DoubleLinkedList<>();
         doubleLinkedList.add("Kato Megumi");
         doubleLinkedList.add("Hayasaka Ai");
-        doubleLinkedList.add("Chono Hina");
-        doubleLinkedList.insertFirst("Shiina Mahiru");
-        doubleLinkedList.insertBefore("Chono Hina", "Kaguya Shinomiya");
-        doubleLinkedList.insertBefore("Shiina Mahiru", "Charlotte");
-        doubleLinkedList.insertAfter("Shiina Mahiru", "Miaww");
-        doubleLinkedList.insertAfter("Chono Hina", "Miaww");
-        doubleLinkedList.insertAfter("Charlotte", "Miaww");
+//        doubleLinkedList.add("Chono Hina");
+//        doubleLinkedList.insertFirst("Shiina Mahiru");
+//        doubleLinkedList.insertBefore("Chono Hina", "Kaguya Shinomiya");
+//        doubleLinkedList.insertBefore("Shiina Mahiru", "Charlotte");
+//        doubleLinkedList.insertAfter("Shiina Mahiru", "Miaww");
+//        doubleLinkedList.insertAfter("Chono Hina", "Miaww");
+//        doubleLinkedList.insertAfter("Charlotte", "Miaww");
+//
+//        doubleLinkedList.insertAt(2, "Megumin");
+//        doubleLinkedList.insertAt(8, "Kurumi");
+//        doubleLinkedList.insertAt(10, "Kurumi");
 
-        doubleLinkedList.insertAt(2, "Megumin");
-        doubleLinkedList.insertAt(8, "Kurumi");
-        doubleLinkedList.insertAt(10, "Kurumi");
+        doubleLinkedList.deleteFirst();
+//        doubleLinkedList.deleteFirst();
+//        doubleLinkedList.deleteFirst();
 
 
         for (String waifu : doubleLinkedList) {
