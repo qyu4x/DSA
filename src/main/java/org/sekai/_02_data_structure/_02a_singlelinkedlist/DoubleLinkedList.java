@@ -89,6 +89,28 @@ public class DoubleLinkedList <T> implements Iterable<T>{
         size++;
     }
 
+    public void insertAfter(T key, T data) {
+        if (tail.data == key) {
+            tail.next = new Node<>(data, null, tail);
+            tail = tail.next;
+            size++;
+            return;
+        }
+
+        Node<T> trav = head;
+        while (trav != null) {
+            if (trav.data == key) {
+                break;
+            }
+
+            trav = trav.next;
+        }
+
+        trav.next = new Node<>(data, trav.next, trav);
+        trav.next.next.prev = trav.next;
+        size++;
+
+    }
 
     @Override
     public Iterator<T> iterator() {

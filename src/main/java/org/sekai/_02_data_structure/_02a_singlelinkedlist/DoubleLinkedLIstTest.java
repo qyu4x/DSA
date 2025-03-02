@@ -10,6 +10,9 @@ public class DoubleLinkedLIstTest {
         doubleLinkedList.insertFirst("Shiina Mahiru");
         doubleLinkedList.insertBefore("Chono Hina", "Kaguya Shinomiya");
         doubleLinkedList.insertBefore("Shiina Mahiru", "Charlotte");
+        doubleLinkedList.insertAfter("Shiina Mahiru", "Miaww");
+        doubleLinkedList.insertAfter("Chono Hina", "Miaww");
+        doubleLinkedList.insertAfter("Charlotte", "Miaww");
 
         for (String waifu : doubleLinkedList) {
             System.out.println(waifu);
