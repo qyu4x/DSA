@@ -6,7 +6,9 @@ public class DoubleLinkedLIstTest {
         DoubleLinkedList<String> doubleLinkedList = new DoubleLinkedList<>();
         doubleLinkedList.add("Kato Megumi");
         doubleLinkedList.add("Hayasaka Ai");
-//        doubleLinkedList.add("Chono Hina");
+        doubleLinkedList.add("Chono Hina");
+
+        doubleLinkedList.deleteAt(0);
 //        doubleLinkedList.insertFirst("Shiina Mahiru");
 //        doubleLinkedList.insertBefore("Chono Hina", "Kaguya Shinomiya");
 //        doubleLinkedList.insertBefore("Shiina Mahiru", "Charlotte");
@@ -18,7 +20,8 @@ public class DoubleLinkedLIstTest {
 //        doubleLinkedList.insertAt(8, "Kurumi");
 //        doubleLinkedList.insertAt(10, "Kurumi");
 
-        doubleLinkedList.deleteFirst();
+//        doubleLinkedList.deleteFirst();
+//        doubleLinkedList.deleteLast();
 //        doubleLinkedList.deleteFirst();
 //        doubleLinkedList.deleteFirst();
 

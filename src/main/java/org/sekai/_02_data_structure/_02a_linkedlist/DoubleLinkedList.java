@@ -133,7 +133,7 @@ public class DoubleLinkedList<T> implements Iterable<T> {
 
     public T deleteFirst() {
         if (isEmpty()) {
-            throw new RuntimeException("Empty linkedlist");
+            throw new RuntimeException("Linked List is Empty");
         }
 
         T data = head.data;
@@ -143,6 +143,51 @@ public class DoubleLinkedList<T> implements Iterable<T> {
 
         if (isEmpty()) tail = null;
         else head.prev = null;
+
+        return data;
+    }
+
+    public T deleteLast() {
+        if (isEmpty()) {
+            throw new RuntimeException("Linked List is Empty");
+        }
+
+        T data = tail.data;
+
+        tail = tail.prev;
+        size--;
+
+        if (isEmpty()) head = null;
+        else tail.next = null;
+
+        return data;
+    }
+
+    public T deleteAt(int index) {
+        if (index > (size - 1) || index < 0) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        if (index == 0) {
+            return deleteFirst();
+        }
+
+        if (index == (size - 1)) {
+            return deleteLast();
+        }
+
+        Node<T> trav = head;
+        for (int i = 0; i < index; i++) {
+            trav = trav.next;
+        }
+
+        T data = trav.data;
+        trav.next.prev = trav.prev;
+        trav.prev.next = trav.next;
+        size--;
+
+        trav.data = null;
+        trav.next = trav.prev = null;
 
         return data;
     }
