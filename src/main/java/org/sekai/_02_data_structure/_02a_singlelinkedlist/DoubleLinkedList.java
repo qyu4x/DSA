@@ -4,8 +4,6 @@ import java.util.Iterator;
 
 public class DoubleLinkedList <T> implements Iterable<T>{
 
-    private T data;
-
     private int size;
 
     private Node<T> head;
@@ -110,6 +108,26 @@ public class DoubleLinkedList <T> implements Iterable<T>{
         trav.next.next.prev = trav.next;
         size++;
 
+    }
+
+    public void insertAt(int index, T data) {
+        if (index > size() - 1 || index < 0) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        if (index == 0) {
+            insertFirst(data);
+            return;
+        }
+
+        Node<T> trav = head;
+        for (int i = 0; i < index - 1; i++) {
+            trav = trav.next;
+        }
+
+        trav.next = new Node<>(data, trav.next, trav);
+        trav.next.next.prev = trav.next;
+        size++;
     }
 
     @Override

@@ -14,9 +14,16 @@ public class DoubleLinkedLIstTest {
         doubleLinkedList.insertAfter("Chono Hina", "Miaww");
         doubleLinkedList.insertAfter("Charlotte", "Miaww");
 
+        doubleLinkedList.insertAt(2, "Megumin");
+        doubleLinkedList.insertAt(8, "Kurumi");
+        doubleLinkedList.insertAt(10, "Kurumi");
+
+
         for (String waifu : doubleLinkedList) {
             System.out.println(waifu);
         }
+
+        System.out.println(doubleLinkedList.size());
 
     }
 }
