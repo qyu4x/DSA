@@ -8,7 +8,11 @@ public class SingleLinkedListTest {
         history.insertAt(0, "Kato Megumi");
         history.insertAt(1, "Chono Hina");
         history.addLast("Chinatsu");
-        history.removeFirst();
+//        history.removeFirst();
+        history.insertAfter("Chono Hina", "Emilia");
+        history.insertAfter("Kato Megumi", "Emilia");
+        history.insertAfter("Chinatsu", "Emilia");
+        history.insertBefore("Emilia", "Miaw");
 
         //history.removeAt(2);
 

@@ -68,6 +68,52 @@ public class SingleLinkedList <T> implements Iterable<T>{
         size++;
     }
 
+    public void insertAfter(T key, T data) {
+        if (isEmpty()) {
+            throw new RuntimeException("Linked list is empty");
+        }
+
+        Node<T> trav = head;
+        while (trav != null) {
+            if (trav.data == key) {
+                break;
+            }
+            trav = trav.next;
+        }
+
+        Node<T> temp = trav.next;
+        trav.next = new Node<>(data, temp);
+        if (temp == null) {
+            tail = trav.next;
+        }
+        size++;
+    }
+
+    public void insertBefore(T key, T data) {
+        if (isEmpty()) {
+            throw new RuntimeException("Linked list is empty");
+        }
+
+        if (head.data == key) {
+            head = new Node<>(data, head);
+            return;
+        }
+
+        Node<T> trav = head;
+        boolean isFoundKey = false;
+        while (trav.next != null) {
+            if (trav.next.data == key) {
+                isFoundKey = true;
+                break;
+            }
+            trav = trav.next;
+        }
+
+        if (isFoundKey) {
+            trav.next = new Node<>(data, trav.next);
+        }
+    }
+
     public void insertAt(int index, T data) {
         if (index < 0 || index > size - 1) {
            throw new IndexOutOfBoundsException();
