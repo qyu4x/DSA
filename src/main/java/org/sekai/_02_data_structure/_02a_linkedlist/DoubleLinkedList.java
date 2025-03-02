@@ -209,6 +209,10 @@ public class DoubleLinkedList<T> implements Iterable<T> {
         return -1;
     }
 
+    public T remove(T element) {
+        return deleteAt(indexOf(element));
+    }
+
     @Override
     public Iterator<T> iterator() {
         return new Iterator<T>() {

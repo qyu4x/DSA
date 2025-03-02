@@ -9,6 +9,9 @@ public class DoubleLinkedLIstTest {
         doubleLinkedList.add("Chono Hina");
 
         doubleLinkedList.deleteAt(0);
+        doubleLinkedList.add("Kato Megumi");
+
+        System.out.println("remove element: " + doubleLinkedList.remove("Kato Megumi"));
 //        doubleLinkedList.insertFirst("Shiina Mahiru");
 //        doubleLinkedList.insertBefore("Chono Hina", "Kaguya Shinomiya");
 //        doubleLinkedList.insertBefore("Shiina Mahiru", "Charlotte");
@@ -30,7 +33,7 @@ public class DoubleLinkedLIstTest {
             System.out.println(waifu);
         }
 
-        System.out.println(doubleLinkedList.indexOf("Hayasaka Ai Miaw"));
+        //System.out.println(doubleLinkedList.indexOf("Hayasaka Ai Miaw"));
         //System.out.println(doubleLinkedList.size());
 
     }
